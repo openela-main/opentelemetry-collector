@@ -12,7 +12,7 @@ Collector with the supported components for a Red Hat build of OpenTelemetry}
 %global godocs        README.md
 
 Name:           opentelemetry-collector
-Release:        1%{?dist}
+Release:        2%{?dist}
 Summary:        Red Hat build of OpenTelemetry
 
 License:        Apache-2.0
@@ -102,6 +102,19 @@ fi
 %{_bindir}/*
 
 %changelog
+* Tue Feb 11 2025 Kseniia Nivnia <knivnia@redhat.com> - 0.107.0-2
+- Bump revision
+- Update tarball name to match upstream
+- Upgrade the following tarball dependencies:
+- x/sys v0.23.0 to v0.29.0
+- x/crypto v0.26.0 to v0.32.0
+- x/net v0.28.0 to v0.33.0
+- x/sync v0.8.0 to v0.10.0
+- x/term v0.23.0 to v0.28.0
+- x/text v0.17.0 to v0.21.0
+- Update addresses the following CVEs:
+- CVE-2024-45338
+- CVE-2024-45337
 * Mon Sep 23 2024 Felix Kolwa <fkolwa@redhat.com> - 0.107.0-1
 - Version bump to 0.107.0
 - Reset release to 1
