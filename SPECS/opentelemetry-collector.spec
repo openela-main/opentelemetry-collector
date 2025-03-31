@@ -12,7 +12,7 @@ Collector with the supported components for a Red Hat build of OpenTelemetry}
 %global godocs        README.md
 
 Name:           opentelemetry-collector
-Release:        8%{?dist}
+Release:        10%{?dist}
 Summary:        Red Hat build of OpenTelemetry
 
 License:        Apache-2.0
@@ -106,12 +106,23 @@ fi
 %{_bindir}/*
 
 %changelog
+* Fri Mar 28 2025 Conor Cowman <ccowman@redhat.com> - 0.107.0-10
+- Bump revision
+- Update golang-jwt v5.2.1 to v5.2.2
+- Update addresses CVE-2025-30204
+  Resolves: RHEL-85032
+
+* Tue Mar 25 2025 Conor Cowman <ccowman@redhat.com> - 0.107.0-9
+- Bump revision 
+- Correct incorrect Go version in previous changelog entries
+- Adjust changelog to accurately reflect point of resolution for CVE-2024-45336
+
 * Fri Mar 21 2025 Conor Cowman <ccowman@redhat.com> - 0.107.0-8
 - Bump revision
-- Update Golang v1.22.11 to v1.23.0
+- Update Golang v1.21.11 to v1.23.0
 - Update x/oauth2 v0.22.0 to v0.27.0
-- Update addresses CVE-2025-22868
-  Resolves: RHEL-81358
+- Update addresses CVE-2025-22868 and CVE-2024-45336
+  Resolves: RHEL-81358, RHEL-82692
 
 * Fri Mar 21 2025 Conor Cowman <ccowman@redhat.com> - 0.107.0-7
 - Bump revision
@@ -128,10 +139,8 @@ fi
 
 * Fri Mar 21 2025 Conor Cowman <ccowman@redhat.com> - 0.107.0-5
 - Bump revision
-- Update tarball golang from 1.21.0 to 1.22.11
+- Update tarball golang from 1.21.0 to 1.21.11
 - Remove explicit go toolchain dependency
-- Update addresses CVE-2024-45336
-  Resolves: RHEL-82692
 
 * Thu Mar 06 2025 Conor Cowman <ccowman@redhat.com> - 0.107.0-4
 - Bump revision
