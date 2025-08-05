@@ -1,6 +1,6 @@
 %global goipath         github.com/os-observability/redhat-opentelemetry-collector
 
-Version:                0.107.0
+Version:                0.127.0
 ExcludeArch:            %{ix86} s390 ppc ppc64
 
 %gometa
@@ -12,7 +12,7 @@ Collector with the supported components for a Red Hat build of OpenTelemetry}
 %global godocs        README.md
 
 Name:           opentelemetry-collector
-Release:        10%{?dist}
+Release:        1%{?dist}
 Summary:        Red Hat build of OpenTelemetry
 
 License:        Apache-2.0
@@ -106,51 +106,51 @@ fi
 %{_bindir}/*
 
 %changelog
-* Fri Mar 28 2025 Conor Cowman <ccowman@redhat.com> - 0.107.0-10
+* Tue Jun 10 2025 Kseniia Nivnia <knivnia@redhat.com> - 0.127.0-1
+- Collector version update
+- Go version update to v1.23.9
+- Update addresses CVE-2025-22871
+  Resolves: RHEL-90050
+
+* Wed Mar 26 2025 Conor Cowman <ccowman@redhat.com> - 0.107.0-8
 - Bump revision
 - Update golang-jwt v5.2.1 to v5.2.2
 - Update addresses CVE-2025-30204
-  Resolves: RHEL-85032
-
-* Tue Mar 25 2025 Conor Cowman <ccowman@redhat.com> - 0.107.0-9
-- Bump revision 
-- Correct incorrect Go version in previous changelog entries
-- Adjust changelog to accurately reflect point of resolution for CVE-2024-45336
-
-* Fri Mar 21 2025 Conor Cowman <ccowman@redhat.com> - 0.107.0-8
-- Bump revision
-- Update Golang v1.21.11 to v1.23.0
-- Update x/oauth2 v0.22.0 to v0.27.0
-- Update addresses CVE-2025-22868 and CVE-2024-45336
-  Resolves: RHEL-81358, RHEL-82692
+  Resolves: RHEL-85033
 
 * Fri Mar 21 2025 Conor Cowman <ccowman@redhat.com> - 0.107.0-7
 - Bump revision
 - Update go-jose v4.0.2 to v4.0.5
 - Update testify v1.9.0 to v1.10.0
 - Update addresses CVE-2025-27144
-  Resolves: RHEL-84444
+  Resolves: RHEL-82967
 
 * Fri Mar 21 2025 Conor Cowman <ccowman@redhat.com> - 0.107.0-6
 - Bump revision
 - Update expr v1.16.9 to v1.17.0
-- Update addresses CVE-2025-29786
-  Resolves: RHEL-83842
-
-* Fri Mar 21 2025 Conor Cowman <ccowman@redhat.com> - 0.107.0-5
-- Bump revision
-- Update tarball golang from 1.21.0 to 1.21.11
 - Remove explicit go toolchain dependency
+- Update addresses CVE-2025-29786
+  Resolves: RHEL-83841
+
+* Fri Mar 14 2025 Conor Cowman <ccowman@redhat.com> - 0.107.0-5
+- Bump revision
+- Update Golang v1.22.11 to v1.23.0
+- Add toolchain go1.23.7
+- Update x/oauth2 v0.22.0 to v0.27.0
+- Update addresses CVE-2025-22868
+  Resolves: RHEL-81359
 
 * Thu Mar 06 2025 Conor Cowman <ccowman@redhat.com> - 0.107.0-4
 - Bump revision
-- Fix incorrect date in changelog
-
-* Thu Mar 06 2025 Conor Cowman <ccowman@redhat.com> - 0.107.0-3
-- Bump revision
 - Add runtime requirements for shadow-utils and util-linux to ensure successful creation of observability user on installation
 - Modify post-uninstallation stage to only delete delete the observability user on full uninstallation to prevent the user being deleted during upgrades
-  Resolves: RHEL-82486
+  Resolves: RHEL-81967
+
+* Wed Feb 12 2025 Conor Cowman <ccowman@redhat.com> - 0.107.0-3
+- Bump revision
+- Update tarball golang from 1.21.0 to 1.22.11
+- Update addresses CVE-2024-45336
+  Resolves: RHEL-79113
 
 * Tue Feb 11 2025 Kseniia Nivnia <knivnia@redhat.com> - 0.107.0-2
 - Bump revision
