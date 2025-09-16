@@ -12,7 +12,7 @@ Collector with the supported components for a Red Hat build of OpenTelemetry}
 %global godocs        README.md
 
 Name:           opentelemetry-collector
-Release:        1%{?dist}
+Release:        2%{?dist}
 Summary:        Red Hat build of OpenTelemetry
 
 License:        Apache-2.0
@@ -106,6 +106,12 @@ fi
 %{_bindir}/*
 
 %changelog
+* Mon Aug 11 2025 Kseniia Nivnia <knivnia@redhat.com> - 0.127.0-2
+- Bump revision
+- Go version update to v1.24.4
+- Update addresses CVE-2025-4673
+  Resolves: RHEL-105058
+
 * Tue Jun 10 2025 Kseniia Nivnia <knivnia@redhat.com> - 0.127.0-1
 - Collector version update
 - Go version update to v1.23.9
