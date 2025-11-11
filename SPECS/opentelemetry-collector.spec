@@ -1,6 +1,6 @@
 %global goipath         github.com/os-observability/redhat-opentelemetry-collector
 
-Version:                0.127.0
+Version:                0.135.0
 ExcludeArch:            %{ix86} s390 ppc ppc64
 
 %gometa
@@ -12,7 +12,7 @@ Collector with the supported components for a Red Hat build of OpenTelemetry}
 %global godocs        README.md
 
 Name:           opentelemetry-collector
-Release:        2%{?dist}
+Release:        1%{?dist}
 Summary:        Red Hat build of OpenTelemetry
 
 License:        Apache-2.0
@@ -29,6 +29,7 @@ BuildRequires: policycoreutils, checkpolicy, selinux-policy-devel
 Requires(pre): shadow-utils
 Requires(pre): util-linux
 Requires(pre): /usr/sbin/useradd, /usr/bin/getent
+Requires(pre): group(systemd-journal)
 Requires(postun): /usr/sbin/userdel
 
 %description
@@ -106,6 +107,12 @@ fi
 %{_bindir}/*
 
 %changelog
+* Wed Oct 08 2025 Kseniia Nivnia <knivnia@redhat.com> - 0.135.0-1
+- Version bump to 0.135.0
+- Add systemd-journal group to Requires(pre)
+- Bump go-tpm-keyfiles
+  Resolves: RHEL-119812
+
 * Mon Aug 11 2025 Kseniia Nivnia <knivnia@redhat.com> - 0.127.0-2
 - Bump revision
 - Go version update to v1.24.4
