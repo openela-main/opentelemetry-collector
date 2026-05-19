@@ -12,7 +12,7 @@ Collector with the supported components for a Red Hat build of OpenTelemetry}
 %global godocs        README.md
 
 Name:           opentelemetry-collector
-Release:        1%{?dist}
+Release:        2%{?dist}
 Summary:        Red Hat build of OpenTelemetry
 
 License:        Apache-2.0
@@ -107,6 +107,11 @@ fi
 %{_bindir}/*
 
 %changelog
+* Tue Apr 28 2026 Kseniia Nivnia <knivnia@redhat.com> - 0.144.0-2
+- Update to Go v1.26.2, go-jose v4.1.4, go-grcp v1.79.3
+- Addresses CVE-2026-25679, CVE-2026-33186, CVE-2026-34986, CVE-2026-32282, CVE-2026-32283, CVE-2026-32280, CVE-2026-33810
+  Resolves: RHEL-158777, RHEL-160842, RHEL-165038, RHEL-166685, RHEL-167683, RHEL-167395, RHEL-166351
+
 * Wed Feb 18 2026 Kseniia Nivnia <knivnia@redhat.com> - 0.144.0-1
 - Update to v0.144.0
 - Addresses CVE-2025-61726, CVE-2025-68121
