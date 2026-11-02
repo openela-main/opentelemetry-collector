@@ -1,4 +1,4 @@
-%global goipath         github.com/os-observability/redhat-opentelemetry-collector
+%global goipath         github.com/openshift/redhat-opentelemetry-collector
 
 Version:                0.158.0
 ExcludeArch:            %{ix86} s390 ppc ppc64
@@ -12,7 +12,7 @@ Collector with the supported components for a Red Hat build of OpenTelemetry}
 %global godocs        README.md
 
 Name:           opentelemetry-collector
-Release:        1%{?dist}
+Release:        2%{?dist}
 Summary:        Red Hat build of OpenTelemetry
 
 License:        Apache-2.0
@@ -107,6 +107,11 @@ fi
 %{_bindir}/*
 
 %changelog
+* Wed Oct 21 2026 Kseniia Nivnia <knivnia@redhat.com> - 0.158.0-2
+- Rebuild with updated golang and repo URL
+- Addresses CVE-2026-111943, CVE-2026-78669, CVE-2026-78667, CVE-2026-97031
+- Resolves: RHEL-287545, RHEL-279168, RHEL-278866, RHEL-278514
+
 * Thu Oct 01 2026 Kseniia Nivnia <knivnia@redhat.com> - 0.158.0-1
 - Update to v0.158.0
 - Addresses CVE-2026-84445
