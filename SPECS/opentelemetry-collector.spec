@@ -12,7 +12,7 @@ Collector with the supported components for a Red Hat build of OpenTelemetry}
 %global godocs        README.md
 
 Name:           opentelemetry-collector
-Release:        2%{?dist}
+Release:        3%{?dist}
 Summary:        Red Hat build of OpenTelemetry
 
 License:        Apache-2.0
@@ -107,25 +107,30 @@ fi
 %{_bindir}/*
 
 %changelog
-* Wed Oct 21 2026 Kseniia Nivnia <knivnia@redhat.com> - 0.158.0-2
-- Rebuild with updated golang and repo URL
-- Addresses CVE-2026-111943, CVE-2026-78669, CVE-2026-78667, CVE-2026-97031
-- Resolves: RHEL-287545, RHEL-279168, RHEL-278866, RHEL-278514
+* Mon Nov 23 2026 Kseniia Nivnia <knivnia@redhat.com> - 0.158.0-3
+- Rebuild with updated golang and klauspost/compress
+- Addresses CVE-2026-116591, CVE-2026-78660, CVE-2026-78659
+- Resolves: RHEL-298411, RHEL-306708, RHEL-307518
 
-* Thu Oct 01 2026 Kseniia Nivnia <knivnia@redhat.com> - 0.158.0-1
+* Mon Nov 02 2026 Kseniia Nivnia <knivnia@redhat.com> - 0.158.0-2
+- Rebuild with updated golang and repo URL
+- Addresses CVE-2026-111943, CVE-2026-78669, CVE-2026-78667, CVE-2026-97031, CVE-2026-94440
+- Resolves: RHEL-287548, RHEL-279388, RHEL-279017, RHEL-278738, RHEL-290110
+
+* Wed Oct 07 2026 Kseniia Nivnia <knivnia@redhat.com> - 0.158.0-1
 - Update to v0.158.0
 - Addresses CVE-2026-84445
-- Resolves: RHEL-262072
+- Resolves: RHEL-262073
 
-* Thu Sep 03 2026 Kseniia Nivnia <knivnia@redhat.com> - 0.152.1-2
+* Wed Sep 09 2026 Kseniia Nivnia <knivnia@redhat.com> - 0.152.1-2
 - Rebuild with updated golang and otel
-- Addresses CVE-2026-41178, CVE-2026-56853, CVE-2026-56858, CVE-2026-33818, CVE-2026-56860, CVE-2026-56859, CVE-2026-56862, CVE-2026-39820, CVE-2026-42499, CVE-2026-42504
-  Resolves: RHEL-239520, RHEL-241242, RHEL-241282, RHEL-241466, RHEL-241804, RHEL-241988, RHEL-242239, RHEL-251745, RHEL-251881, RHEL-251101
+- Update addresses  CVE-2026-39820, CVE-2026-42499, CVE-2026-42504, CVE-2026-56860, CVE-2026-56859, CVE-2026-41178, CVE-2026-56862, CVE-2026-56858, CVE-2026-33818, CVE-2026-56853
+  Resolves: RHEL-251748, RHEL-251889, RHEL-251125, RHEL-241785, RHEL-241974, RHEL-239856, RHEL-241392, RHEL-241297, RHEL-241635, RHEL-241176
 
-* Tue Jun 30 2026 Kseniia Nivnia <knivnia@redhat.com> - 0.152.1-1
+* Mon Jun 29 2026 Kseniia Nivnia <knivnia@redhat.com> - 0.152.1-1
 - Update to v0.152.1
-- Addresses CVE-2026-39821, CVE-2026-42154, CVE-2026-33811, CVE-2026-42151, CVE-2026-27145, CVE-2026-25681
-  Resolves: RHEL-183798, RHEL-185024, RHEL-187326, RHEL-189291, RHEL-189892, RHEL-191122
+- Addresses CVE-2026-39821, CVE-2026-42154, CVE-2026-33811, CVE-2026-42151, CVE-2026-27145, CVE-2026-25681, CVE-2026-27136
+  Resolves: RHEL-183842, RHEL-185027, RHEL-187332, RHEL-189294, RHEL-190006, RHEL-191128, RHEL-191580
 
 * Tue Apr 28 2026 Kseniia Nivnia <knivnia@redhat.com> - 0.144.0-2
 - Update to Go v1.26.2, go-jose v4.1.4, go-grcp v1.79.3
